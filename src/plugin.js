@@ -1,15 +1,14 @@
 function plugin(Vue, Loading) {
-    let Component, component, container, propsData, counter
+    let component, container, propsData, counter
 
     propsData = {
         visible: false
     }
 
     counter = 0
-    Component = Vue.extend(Loading)
     container = document.createElement('div')
     document.getElementsByTagName('body')[0].appendChild(container)
-    component = new Component({
+    component = new Loading({
         propsData
     }).$mount(container)
 

@@ -1,8 +1,7 @@
 'use strict';
 
 function plugin(Vue, Loading) {
-    var Component = void 0,
-        component = void 0,
+    var component = void 0,
         container = void 0,
         propsData = void 0,
         counter = void 0;
@@ -12,10 +11,9 @@ function plugin(Vue, Loading) {
     };
 
     counter = 0;
-    Component = Vue.extend(Loading);
     container = document.createElement('div');
     document.getElementsByTagName('body')[0].appendChild(container);
-    component = new Component({
+    component = new Loading({
         propsData: propsData
     }).$mount(container);
 
